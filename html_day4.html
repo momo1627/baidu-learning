@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>background/list/border/selectors/a</title>
+    <style>
+        h1{
+            text-align: center;
+            text-shadow: 2px 0 4px red;
+            background-color: #00befe;}
+        p{text-decoration: underline;letter-spacing: 2px;
+            text-indent:2rem;
+            background-image: url("http://118.126.113.248/jnshu835/Write.png");
+            background-repeat:no-repeat;
+            background-size:1rem;
+            background-position: 10rem center;
+            border-bottom: 2px dashed firebrick;}
+        dl{font:normal bolder 2rem san-serif,"楷体"}
+        dl{
+            text-transform: capitalize;
+            text-align: center;
+            line-height: 2;
+        }
+        li{
+            list-style-type:circle;}
+        .second{list-style-type: upper-roman}
+        li:nth-child(3){
+            list-style-position: inside;
+        }
+        a:link, a:visited{
+            background-color: red;}
+        a:hover, a:active{
+            background-color: blue;}
+    </style>
+</head>
+<body>
+<h1>简历resume</h1>
+<p>姓名: <strong>daniel</strong></p>
+<p><a href="">123123@qq.com</a></p>
+<dl>
+    <dt>项目经验experience</dt>
+    <dd><ul>
+        <li>html</li>
+        <li class="second">css</li>
+        <li>javascript</li>
+    </ul></dd>
+</dl>
+</body>
+<!--
+1.background-系列
+1.1background-color:和color取值一样。！重点背景颜色是从border开始的覆盖padding，有padding无content一样会有背景颜色
+1.2background-img：通常通过平铺减小图片大小，优化网页。所以背景图片一般选择即使平铺也不影响内容的单色简单图样
+1.2.1通过两个元素的背景图片组合制作精灵图
+1.2.2相关属性background-repeat/background-position/background-size/background-attachment
+2.border-系列
+2.1border:border-width border-style border-color border-width/style/color:top right bottom left
+2.2border相关盒模型 box-sizing:border-box:width/height=border+padding+content;
+3.list-系列
+3.1 list-style:none list-style-type:很多 list-style-position:inside(inside list item) list-style-img:url("")
+3.2 list-style:type position img
+4.links states
+4.1 a:link a:visited a:hover a:active
+4.2顺序不能改变，每个状态都可以设置
+-->
+</html>
