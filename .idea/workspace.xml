@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0b7b1376-781f-4aa8-984c-6570410d455e" name="Default" comment="day5&#10;&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HTML_day5_resume3.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HTML_day5_style3.css" />
+    <list default="true" id="0b7b1376-781f-4aa8-984c-6570410d455e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="baidu-learning.iws" />
@@ -319,7 +317,13 @@
       <option name="project" value="LOCAL" />
       <updated>1528421109268</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="day5&#10;&#10;">
+      <created>1528425191164</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1528425191164</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
