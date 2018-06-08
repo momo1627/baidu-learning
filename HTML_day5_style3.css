@@ -1,0 +1,46 @@
+body {
+    font-size: 10px;
+}
+
+.title {
+    background-color: #848484;
+    color: white;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.content {
+    height: 60px;
+    border-bottom: 1px solid #d5d5d5;
+}
+
+.subtitle {
+    background-color: #d5d5d5;
+    float: left;
+    width: 5%;
+    height: 60px;
+    line-height: 60px;
+    font-weight: bold;
+    border-bottom: 1px solid white;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.content_right {
+    margin-left: 5px;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.detail {
+    margin-right: 15px;
+}
+
+.detail span {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.sub {
+    font-weight: bold;
+}
