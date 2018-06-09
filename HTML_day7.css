@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box}
+.header{
+    padding-top:10px;
+    height: 60px;
+    width: 100%;
+    background-color: #333333;
+}
+.header .logo{
+    color: white;
+}
+.header .link{
+    color:white;
+    float: right;
+}
+.header .link ul li{
+    list-style-type: none;
+    float: left;
+    margin-left: 5px;
+    font-size:0.6rem;
+}
+.header .link ul li a{
+    color: white;
+}
+.center{
+    width: 960px;
+    margin: 0 auto;}
+.banner{
+    height: 180px;
+    width: 100%;
+    background-color: #66ba33;
+}
+.banner .center{
+    height: 180px;
+    position: relative;
+    /*border: 1px solid #000;*/
+}
+.banner .pages{
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}
+.banner .pages li{
+    float: left;
+    list-style-type: none;
+    margin-left: 5px;
+}
+.banner .pages div{
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    height: 30px;
+    border: 1px solid #000;
+    background-color: #dff0d5;
+}
+.nav{
+    width: 100%;
+    border-bottom: 1px solid #ececec;
+    height: 50px}
+.nav .center{
+    height: 50px;
+}
+.nav .center .nav_main{
+    height: 50px;
+    position: relative;}
+.nav .center .nav_main ul {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+}
+.nav .center .nav_main ul li{
+    height: 40px;
+    width: 80px;
+    background-color: #ededed;
+    border-radius: 10px 10px 0 0;
+    font-size:0.6rem;
+    list-style-type: none;
+    float: left;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid darkgray;
+}
+.nav .center .nav_main ul li:nth-child(1){
+    border-bottom:none;
+    background-color: white;
+}
+.content{
+    width: 100%;}
+.content .center{
+    /*border: 1px solid #000;*/
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+.content .center .column{
+    flex-grow:1;
+    display: flex;
+    justify-content:space-around;
+    margin-bottom: 10px;
+}
+.content .center div{
+}
+.content .center .column div{
+    flex-grow:1;
+    padding: 80px;
+    text-align: center;
+    margin-right: 10px;
+    border: 1px solid darkgray;
+
+}
+.footer{
+    height: 60px;
+    width: 100%;
+    background-color: #666666;
+    text-align: center;
+    color: white;
+    padding-top: 10px;}
