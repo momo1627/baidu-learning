@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>day9</title>
+    <style>
+        .header{
+            background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("day9/header.png");
+            max-width: 1600px;
+            height: 990px;
+            margin: 0 auto;
+            width: 100%;
+            padding-top: 200px;
+            background-repeat:no-repeat;
+            background-size:cover ;
+            text-align: center;
+        }
+        .header .title{
+            color: white;
+            margin: 0 auto;
+        }
+        .header .description{
+            color: gainsboro;
+            width: 40%;
+            margin: 100px auto;
+        }
+        .header .register{
+            border: 1px solid gainsboro;
+            margin: 200px auto;
+            width: 60%;
+            height: 300px;
+        }
+        .header .register .register_title{
+            color: white;
+            margin-top: 60px;
+            margin-bottom: 40px;
+            font-size: 0.8rem;
+
+        }
+        .header .register .register_subtitle{
+            color: gainsboro;
+            font-size: 0.6rem;
+        }
+        .header .register .information{
+            margin: 60px auto;
+            width:83.33%;
+        }
+        .header .register .information form input{
+            background-color: rgba(0,0,0,0);
+            width: 30%;
+            padding: 10px;
+            border: 1px solid gainsboro;
+            color: white;
+        }
+        .header .register .information form{
+            display: flex;
+            justify-content:space-between;}
+        .header .register .information form input[type=submit]{
+            width: 15%;
+            padding: 10px;
+            background-color: white;
+            border:none;
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .features{
+            height: 660px;
+            max-width: 1600px;
+            text-align: center;
+            margin: 0 auto;
+            padding-top: 80px;
+        }
+        .features_title{
+            margin: 0 auto;
+            font-weight:bold;
+        }
+        .features .features_description{
+            font-size:2.5rem;
+            margin: 20px auto;
+            width: 50%;
+        }
+        .features .features_content{
+            margin: 100px auto;
+            width: 70%;
+            display: flex;
+            flex-direction:column;
+            text-align: left;
+        }
+        .features .features_content .row{
+            display: flex;
+            justify-content:space-between;
+        }
+        .features .features_content .features_detail{
+            width: 40%;
+            margin-bottom: 40px;
+        }
+        .features .features_content .features_detail img{
+            float: left;
+        }
+        dt{
+            font-weight:bold;}
+        dt,dd{
+            margin-left: 60px;
+            }
+        dd{
+            color: gray;
+            margin-top: 20px;}
+        .car{
+            position: relative;
+            margin: 0 auto;
+            max-width: 1600px;
+            width:100%;
+            height: 800px;
+            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("day9/car_main.png"),url("day9/car_background.png");
+            background-repeat:no-repeat;
+            background-size:auto,auto,cover;
+            background-position: center right;
+        }
+        .car .main{
+            width: 30%;
+            height: 400px;
+            position: absolute;
+            top: 30%;
+            left: 15%;
+        }
+        .car .main .car_title{
+            color: white;
+            font-size:2rem;
+            width: 70%;
+        }
+        .car .main .car_description{
+            color: gray;
+            margin-top: 20px;
+            width: 70%;
+        }
+        .car .main .car_selection{
+            margin-top: 30px;
+        }
+        .car .main .car_selection button{
+            text-decoration: none;
+            margin-right: 20px;
+            border: 1px solid gray;
+            background-color: transparent;
+            text-align: center;
+            display: inline-block;
+            padding: 16px 16px;
+            color: white;
+            font-size: 0.8rem;
+        }
+        .car .main .car_selection button:hover{
+            background-color: white;
+            color: #000;
+        }
+        .products{
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid gainsboro;
+            padding-top: 50px;
+        }
+        .products .products_detail{
+            display: flex;
+            margin: 40px auto;
+            justify-content: space-around;
+            width: 80%;
+        }
+        .products .products_detail .product{
+            width: 20%;
+        }
+        .products .products_detail .product div{
+            margin-top: 20px;
+        }
+        .pictures{
+            width: 100%;
+            padding-top: 50px;
+        }
+        .picture{
+            width: 70%;
+            height: 350px;
+            margin: 0 auto 50px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .picture_1{
+            background-image: url("day9/leaf.png");
+            background-repeat:no-repeat;
+            background-size: cover;
+            width: 60%;
+            height: 350px;
+        }
+        .picture_2{
+            background-image: url("day9/bird.png");
+            background-repeat:no-repeat;
+            background-size: cover;
+            width: 60%;
+            height: 350px;
+        }
+        .pictures .picture .picture_detail{
+            width: 30%;
+            padding: 50px 0;
+        }
+        .pictures .picture .picture_detail div{
+            color: gray;
+            font-size:0.8rem;
+            width: 80%;
+            line-height: 2;
+        }
+        .crews{
+            border-top: 1px solid gainsboro;
+            border-bottom: 1px solid gainsboro;
+            margin: 0 auto;
+            padding: 50px 0;
+        }
+        .crews .crew_title{
+            text-align: center;
+        }
+        .crews .crew_description{
+            text-align: center;
+            width: 40%;
+            margin: 0 auto;
+        }
+        .crews .crew_member{
+            margin: 0 auto;
+            width: 66%;
+            display: flex;
+            flex-direction: column;
+            justify-content:space-between;
+        }
+        .crews  .crew_member .row{
+            display: flex;
+            justify-content:space-between;
+            margin-top: 40px;
+        }
+        .crews .crew_member .crew{
+            width: 48%;
+            height: 340px;
+        }
+        .crews .crew_member .crew1{
+            background:url("day9/crew_1.png");
+            background-repeat:no-repeat;
+            background-position: center -20px;
+        }.crews .crew_member .crew2{
+            background-image: url("day9/crew_2.png");
+            background-repeat:no-repeat;
+            background-position: center -20px;
+        }.crews .crew_member .crew3{
+            background-image: url("day9/crew_3.png");
+            background-repeat:no-repeat;
+            background-position: center -20px;
+        }.crews .crew_member .crew4{
+            background-image: url("day9/crew_4.png");
+            background-repeat:no-repeat;
+            background-position: center -20px;
+        }
+        .crews .crew_member .crew .crew_detail{
+            text-align: center;
+            border: 1px solid transparent;
+            background-color: rgba(0,0,0,0.5);
+            height: 340px;
+            display:none;
+        }
+        .crews .crew_member .crew:hover .crew_detail{
+            display: block;
+        }
+        .crews .crew_member .crew .crew_detail .crew_name{
+            color: white;
+            margin-top: 100px;
+            font-size:1rem;
+        }
+        .crews .crew_member .crew .crew_detail .crew_position{
+            color: gainsboro;
+            font-size: 0.7rem;
+            margin-top: 20px;
+        }
+        .crews .crew_member .crew .crew_detail .crew_links{
+            margin-top: 50px;
+        }
+        .crews .crew_member .crew .crew_detail .crew_links img{
+            margin: 0 10px;
+        }
+        .contacts{
+            height: 400px;
+            width: 66.6%;
+            margin: 50px auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        .contacts .message{
+            width: 45%;
+            border: 1px solid gainsboro;
+            padding:30px 0;
+            text-align: center;
+            border-radius:10px;
+        }
+        .contacts .message input{
+            width: 70%;
+            height: 30px;
+            margin-top: 30px;
+        }
+        .contacts .message textarea{
+            height: 80px;
+            width: 70%;
+            margin-top: 30px;
+        }
+        .contacts .message input[type=submit]{
+            border:none;
+            color: white;
+            background-color: black;
+        }
+        .contacts .contact_detail{
+            width: 40%;
+            padding: 60px 0;
+        }
+        .contacts .contact_detail .contact_title{
+            font-size:3rem;
+        }
+        .contacts .contact_detail .contact_content{
+            font-size: 0.9rem;
+            margin-top: 10px;
+            color: gainsboro;
+        }
+        .contacts .contact_detail .contact{
+            margin-top: 20px;
+        }
+        .contacts .contact_detail .contact img{
+            float: left;
+            width: 20px;
+        }
+        .contacts .contact_detail .contact>div{
+            margin-left: 40px;
+        }
+        .footer{
+            background-color: black;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            padding: 50px 20px;
+        }
+        .footer .links{
+            width: 15%;
+            list-style-type: none;
+
+        }
+        .footer .links .footer_title{
+            color: white;
+        }
+        .footer .links ul{
+            list-style-type:none;
+            padding: 0;
+        }
+        .footer .links ul li{
+            margin-top: 10px;
+        }
+        .footer .links ul li a{
+            text-decoration: none;
+            color: gray;
+        }
+        .footer .media{
+            width: 20%;
+            }
+        .footer .media .footer_title{
+            color: white;
+        }
+        .footer .media .media_content{
+            color: gray;
+            margin-top: 20px;
+        }
+        .footer .media ul{
+            padding: 0;
+            width: 70%;
+            margin-top: 30px;
+            list-style:none;
+            display: flex;
+            justify-content:space-between;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="title"><h1>Hello World</h1></div>
+    <div class="description">China is speeding up strategic plan,standards,traffic rules,laws and regulations on accident-incurred liabilities for its smart car industry. Economic information Daily reported Thursday.</div>
+    <div class="register">
+        <div class="register_title">CREAT YOUR ACCOUNT</div>
+        <div class="register_subtitle">IT IS ABSOLUTELY FREE</div>
+        <div class="information">
+            <form action="#">
+                <input type="email" placeholder="Enter Your E-mail Address"><input type="password" placeholder="Create Your Password"><input type="submit" value="Sign In">
+            </form>
+        </div>
+    </div>
+</div>
+<div class="features">
+    <div class="features_title">BOATLOADS OF AWESOME</div>
+    <div class="features_description">Ready-made,customizable,HTML landing page sections</div>
+    <div class="features_content">
+        <div class="row">
+            <div class="features_detail iphone">
+                <img src="day9/Iphone.png" alt="">
+                    <dt>
+                        Mobile First</dt>
+                <dd>All modulz are built mobile-first for maximum device compatibility.</dd>
+        </div>
+            <div class="features_detail accessibility">
+                <img src="day9/access.png" alt="">
+
+                <dt>Accessibility</dt>
+                    <dd>Support for IE8,mobile and tablet devices,screenreaders and color blind.</dd>
+            </div>
+        </div>
+        <div class="row">
+            <div class="features_detail fluid" >
+                <img src="day9/fluid.png" alt="">
+
+                <dt>Fluid Typography</dt>
+                <dd>On different screen sizes,fonts automagically scale with the viewport</dd>
+        </div>
+            <div class="features_detail customization" >
+                <img src="day9/custom.png" alt="">
+
+                <dt>Customization</dt>
+                    <dd>Make any design your own using the Style Editor. Personalize fonts,colors and layouts to create the custom look you want</dd>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</div>
+<div class="car">
+    <div class="main">
+        <div class="car_title">Supportive policies for China's smart car</div>
+        <div class="car_description">China will come up with its own smart car standards,traffic rules,laws and regulations relating to safety,according to the China Industry Innovatino Alliance for the Intelligent and Connected Vehicles</div>
+        <div class="car_selection">
+            <button>CHECK OUT FEATURES</button>
+            <button>TRA PRODUCT FOR FREE</button>
+        </div>
+    </div>
+</div>
+<div class="products">
+    <div class="products_title"><h1>Try Our Awesome Products</h1></div>
+    <div class="products_detail">
+        <div class="product">
+            <img src="day9/Singleton.png" alt="">
+            <div class="products_description">
+                Li Jun, a China Academy of Engineering academician and also director of the alliance's experts'committee, said that China will also launch design guidance for smart cars, mart map architecture and standards for test grounds.
+            </div>
+        </div>
+        <div class="product">
+            <img src="day9/Hero.png" alt="">
+            <div class="products_description">Li said the smart car industry is able to enlarge the current car industry by 1 trillion yuan and also able to boost fast development in 5G, internet of cars,big data,artificial intelligence and new-energy vehicles.
+            </div>
+        </div>
+        <div class="product">
+            <img src="day9/Portland.png" alt="">
+            <div class="products_description">Zhang Junyi,a partner with NIO Capital, said that the smart car is the trend for the car industry and China's auto sector will usher in a new key development stage with the improvement of infrastructure, technology,policies and laws</div>
+        </div>
+    </div>
+</div>
+<div class="pictures">
+    <div class="picture">
+    <div class="picture_1"></div>
+        <!--<img src="day9/leaf.png" alt="">-->
+        <div class="picture_detail"><h3>Learn How to Improve Your Personal Business</h3><div>Li Jun, a China Academy of Engineering academician and also director of the alliance's experts'committee, said that China will also launch design guidance for smart cars, mart map architecture and standards for test grounds.</div>
+    </div></div>
+
+    <div class="picture">
+        <div class="picture_detail"><h4>Choose Between Two Beautifully Design Color Schemes.</h4>
+            <div>Li said the smart car industry is able to enlarge the current car industry by 1 trillion yuan and also able to boost fast development in 5G, internet of cars,big data,artificial intelligence and new-energy vehicles.</div></div>
+        <div class="picture_2"></div>
+
+    </div>
+</div>
+<div class="crews">
+    <div class="crew_title"><h2>Our Awesome Crew</h2></div>
+    <div class="crew_description">Our unique online teaching style makes learning easy for everyone. Whether you are trying to land a new job, brush up on your skills</div>
+    <div class="crew_member">
+        <div class="row">
+            <div class="crew crew1">
+                <div class="crew_detail">
+                    <div class="crew_name">Ethan Dutton</div>
+                    <div class="crew_position">SENIOR VISUAL DESIGNER</div>
+                    <div class="crew_links">
+                        <a href=""><img src="day9/fb.png" alt=""></a>
+                        <a href=""><img src="day9/tw.png" alt=""></a>
+                        <a href=""><img src="day9/ins.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="crew crew2">
+                <div class="crew_detail">
+                    <div class="crew_name">Ethan Dutton</div>
+                    <div class="crew_position">SENIOR VISUAL DESIGNER</div>
+                    <div class="crew_links">
+                        <a href=""><img src="day9/fb.png" alt=""></a>
+                        <a href=""><img src="day9/tw.png" alt=""></a>
+                        <a href=""><img src="day9/ins.png" alt=""></a>
+                    </div>
+            </div></div>
+        </div>
+        <div class="row">
+            <div class="crew crew3">
+                <div class="crew_detail"><div class="crew_name">Ethan Dutton</div>
+                    <div class="crew_position">SENIOR VISUAL DESIGNER</div>
+                    <div class="crew_links">
+                        <a href=""><img src="day9/fb.png" alt=""></a>
+                        <a href=""><img src="day9/tw.png" alt=""></a>
+                        <a href=""><img src="day9/ins.png" alt=""></a>
+                    </div></div></div>
+            <div class="crew crew4">
+                <div class="crew_detail"><div class="crew_name">Ethan Dutton</div>
+                    <div class="crew_position">SENIOR VISUAL DESIGNER</div>
+                    <div class="crew_links">
+                        <a href=""><img src="day9/fb.png" alt=""></a>
+                        <a href=""><img src="day9/tw.png" alt=""></a>
+                        <a href=""><img src="day9/ins.png" alt=""></a>
+                    </div></div></div>
+        </div>
+
+
+    </div>
+</div>
+<div class="contacts">
+    <div class="message">
+        <div class="message_title">FELL FREE TO WRITE US</div>
+        <input type="email" placeholder="E-mail"><br>
+        <input type="text" placeholder="Subject"><br>
+        <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea><br>
+        <input type="submit" value="SEND">
+    </div>
+    <div class="contact_detail">
+        <div class="contact_title">Contacts</div>
+        <div class="contact_content">Make any design your own using the Style Editor. Personalize fonts, colors, and layouts to create the custom look you want.</div>
+        <div class="address contact"><img src="day9/map.png" alt="">
+        <div>360 King Street <br> Feastrvale Trevose, PA 19057</div></div>
+        <div class="phone contact"><img src="day9/phone.png" alt="">
+        <div>(755) 564-84-12</div></div>
+        <div class="email contact"><img src="day9/email.png" alt="">
+        <div>youname@mail.com</div></div>
+    </div>
+</div>
+<div class="footer">
+    <div class="links learn_more">
+        <div class="footer_title">LEARN MORE</div>
+        <ul>
+            <li><a href="">How it works</a></li>
+            <li><a href="">Meeting tools</a></li>
+            <li><a href="">Live streaming</a></li>
+            <li><a href="">Contact method</a></li>
+        </ul>
+    </div>
+    <div class="links about_us">
+        <div class="footer_title">ABOUT US</div>
+        <ul>
+            <li><a href="">About us</a></li>
+            <li><a href="">Features</a></li>
+            <li><a href="">Privacy police</a></li>
+            <li><a href="">Terms & Conditions</a></li>
+        </ul>
+    </div>
+    <div class="links support">
+        <div class="footer_title">SUPPORT</div>
+        <ul>
+            <li><a href="">F.A.Q</a></li>
+            <li><a href="">Contact us</a></li>
+            <li><a href="">Live chat</a></li>
+            <li><a href="">Phone call</a></li>
+        </ul>
+    </div>
+    <div class="media">
+        <div class="footer_title">ENJOY LIFE</div>
+        <div class="media_content">Great web UI kit for desiners, freelancers or business </div>
+        <ul>
+            <li><a href=""><img src="day9/twitter.png" alt=""></a></li>
+            <li><a href=""><img src="day9/facebook.png" alt=""></a></li>
+            <li><a href=""><img src="day9/google.png" alt=""></a></li>
+            <li><a href=""><img src="day9/tumblr.png" alt=""></a></li>
+            <li><a href=""><img src="day9/pinterest.png" alt=""></a></li>
+            <li><a href=""><img src="day9/link.png" alt=""></a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
