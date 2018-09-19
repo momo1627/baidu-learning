@@ -8,32 +8,68 @@
     <input id="dec-number" type="number" placeholder="输入一个十进制非负整数">
     <button id="trans-btn">转化为二进制</button>
     <p id="result">运算结果</p>
+    <table id="multiple">
+
+    </table>
     <script>
 
 function dec2bin(decNumber) {
-    decNumber = parseInt(decNumber)
+    decNumber = parseInt(decNumber);
     // 在这里实现你的转化方法，注意需要判断输入必须为一个非负整数
-
+    var twodigit = '';
     if (decNumber < 0){
         alert('enter a positive number')
+    } else if (decNumber == 0){
+        twodigit = '0'
     }
-    var twodigit = '';
-    while (decNumber / 2 > 1){
-        if (decNumber % 2 === 0 ){
-        twodigit = '1' + twodigit;
-        decNumber = decNumber / 2
-    } 
-    if (decNumber % 2 === 1){
-        twodigit = '0' + twodigit;
-        decNumber = (decNumber-1)/2
-    }
-    }
-    if (decNumber == 1 ){
-        twodigit = twodigit + '1'
-    } else{
-        twodigit = twodigit + '0'
+    while (decNumber  >  0){
+        if (decNumber % 2 === 1){
+            twodigit = '1' + twodigit;
+            decNumber = (decNumber-1)/2
+        } else {
+            twodigit = '0' + twodigit;
+            decNumber = decNumber /2
+        }
     }
     return twodigit
+}
+window.onload = maketable;
+function three(){
+    var result = [];
+    for (var i=1;i<=100; i++ ){
+        var j  = '"'+ i +'"';
+        if (i % 3 == 0 || j.includes('3')){
+            result.push('pa')
+        } else{
+              result.push(i)
+        }
+    }
+    return result
+}
+function multiple(){
+    var row = [];
+    var show = '';
+    for (var i = 1;i<10;i++){
+
+        for (var j = 1; j<10;j++){
+             show = i +  '*' + j +  '=' + i*j ;
+             row.push(show);
+        }
+    }
+    return row;
+}
+function maketable(){
+    for (var i = 0; i<9; i++){
+        document.getElementById('multiple').appendChild(document.createElement('tr'));
+        for (var j = 0; j<9; j++)
+        document.getElementsByTagName('tr')[i].appendChild(document.createElement('td'));
+    }
+    var result = multiple();
+    for (k=0;k<result.length;k++){
+        var source = document.createTextNode(result[k]+'...');
+        document.getElementsByTagName('td')[k].appendChild(source)
+
+    }
 }
 document.getElementById('trans-btn').addEventListener('click',function(){
     document.getElementById('result').innerHTML = dec2bin(document.getElementById('dec-number').value)
